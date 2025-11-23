@@ -1,0 +1,17 @@
+import speech_recognition as sr
+import pywhatkit
+import pyttsx3
+mic = sr.Recognizer()
+with sr.Microphone() as source:
+    print("Start speaking...")
+    voice = mic.listen(source)
+    text = mic.recognize_google(voice)
+    print(f"Now Opening {text}")
+
+
+speaker = pyttsx3.init()
+speaker.say(f"Playing {text}")
+speaker.runAndWait()
+
+    
+pywhatkit.playonyt(text)
