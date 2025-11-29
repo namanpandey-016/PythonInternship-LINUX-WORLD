@@ -1,7 +1,7 @@
 #Dashboard for open ai chatbo
 import streamlit as st
 import google.generativeai as genai
-key = "Your-api-key-here"
+key = "Your API Key here"
 genai.configure(api_key=key)
 model = genai.GenerativeModel("gemini-2.5-flash")
 st.header("AI Bot")
